@@ -1,0 +1,17 @@
+server:
+  port: 9001
+
+spring:
+  application:
+    name: eureka-server
+
+eureka:
+  instance:
+    hostname: erueka-master
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+#      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+      defaultZone: http://erueka-master:${server.port}/eureka/,http://erueka-master1:${server.port}/eureka/
+spring.freemarker.prefer-file-system-access: false
